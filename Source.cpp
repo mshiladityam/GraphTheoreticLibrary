@@ -23,11 +23,6 @@ Graph Theoretic Library for Competitive Programming including all major algorith
 
 #define GRAPH_H_
 
-#include <vector>
-#include <list>
-#include <queue>
-using namespace std;
-
 template <class T> class Edge;
 template <class T> class Graph;
 
