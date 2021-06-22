@@ -47,7 +47,7 @@ public:
 	Graph(int sz)
 	{
 		n=sz;
-		adj.resize(n+1);		
+		adj.resize(n+1);
 		dist.resize(n+1, INF);
 	}
 	void add_edge_directed(int u, int v, int w)
@@ -102,9 +102,11 @@ class Djikstra
 
 class FloydWarshall
 {
+	private:
+		vector<vector<int>> g;
 	public:
 		vector<vector<int>> d;
-		vector<vector<int>> g;
+		
 		FloydWarshall(Graph G)
 		{
 			g.resize(G.n+1, vector<int>(G.n+1, INF));	
@@ -200,6 +202,15 @@ public:
 			}
 		}
 	}
+	vector<pair<int, int>> get_edges()
+	{
+		vector<pair<int, int>> v;
+		for (auto e: tree)	v.push_back(e);
+	}
+	int get_wt()
+	{
+		return w;
+	}
 };
 
 class MultisourceBFS //for undirected graphs
@@ -217,7 +228,7 @@ public:
 		}
 		while (!q.empty())
 		{
-			auto u=q.top();
+			auto u=q.front();
 			q.pop();
 			for (auto e: G.adj[u])
 			{
