@@ -2,7 +2,7 @@
 
 Source.cpp consists of a pbject oriented programming template for Graph Theoretic Problems in Competitive Programming. This serves as a blackbox to solve graph problems.
 
-# Documentation
+<h1> <center> Documentation </h1> </center>
 
 <h1> Graph Class </h1>
 This C++ source file has a class named Graph, which represents a graph G(V, adj, dist), where V is the vertex set, represented by an integer n, which denotes the number of vertices in the graph. adj is the adjacency list of vertex and dist represents the distance of a vertex from a source vertex.
